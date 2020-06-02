@@ -34,6 +34,10 @@
   background-color: #000000;
 }
 
+.stu .check-cell input {
+  vertical-align: -5px;
+}
+
 .stu .tabs .item {
   border: solid 2px #000000;
   margin: 2px;

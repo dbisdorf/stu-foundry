@@ -14,29 +14,29 @@
       <div class="label-cell">Preferred Actions</div>
       <div class="preferred-actions">
         <div>
-          <div>
+          <div class="check-cell">
             <input type="checkbox" name="actor.role.data.actions.adjust" disabled {{checked actor.role.data.actions.adjust}} />
             <label class="actions" data-action="adjust" for="actor.role.data.actions.adjust">{{data.actions.adjust}}</label>
           </div>
-          <div>
+          <div class="check-cell">
             <input type="checkbox" name="actor.role.data.actions.attack" disabled {{checked actor.role.data.actions.attack}} />
             <label class="actions" data-action="attack" for="actor.role.data.actions.attack">{{data.actions.attack}}</label>
           </div>
-          <div>
+          <div class="check-cell">
             <input type="checkbox" name="actor.role.data.actions.inspire" disabled {{checked actor.role.data.actions.inspire}} />
             <label class="actions" data-action="inspire" for="actor.role.data.actions.inspire">{{data.actions.inspire}}</label>
           </div>
         </div>
         <div>
-          <div>
+          <div class="check-cell">
             <input type="checkbox" name="actor.role.data.actions.maneuver" disabled {{checked actor.role.data.actions.maneuver}} />
             <label class="actions" data-action="maneuver" for="actor.role.data.actions.maneuver">{{data.actions.maneuver}}</label>
           </div>
-          <div>
+          <div class="check-cell">
             <input type="checkbox" name="actor.role.data.actions.outwit" disabled {{checked actor.role.data.actions.outwit}} />
             <label class="actions" data-action="outwit" for="actor.role.data.actions.outwit">{{data.actions.outwit}}</label>
           </div>
-          <div>
+          <div class="check-cell">
             <input type="checkbox" name="actor.role.data.actions.reveal" disabled {{checked actor.role.data.actions.reveal}} />
             <label class="actions" data-action="reveal" for="actor.role.data.actions.reveal">{{data.actions.reveal}}</label>
           </div>
@@ -59,8 +59,9 @@
             {{/select}}
           </select>
         </div>
-        <div>
-          <input type="checkbox" id="data.destiny" name="data.destiny" {{checked data.destiny}}><label for="data.destiny">Check to reverse a failure, declare a fact, or restore someone's health.</label>
+        <div class="check-cell">
+          <input type="checkbox" id="data.destiny" name="data.destiny" {{checked data.destiny}}>
+          <label for="data.destiny">Check to reverse a failure, declare a fact, or restore someone's health.</label>
         </div>
       </div>
 
