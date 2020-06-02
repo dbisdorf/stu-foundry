@@ -1,0 +1,65 @@
+.stu a:hover {
+  text-shadow: unset;
+}
+
+.stu .sheet-header img {
+  flex: 0 0 150px;
+  height: 150px;
+}
+
+.stu .charname {
+  text-align: center;
+}
+
+.stu .look-and-style {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 5fr;
+}
+
+.stu .preferred-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.stu .health-and-destiny {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+.stu .label-cell {
+  text-align: center;
+  margin: 2px;
+  padding: 3px;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.stu .tabs .item {
+  border: solid 2px #000000;
+  margin: 2px;
+  padding: 5px;
+}
+
+.stu .tabs .item.active {
+  color: #ffffff;
+  background-color: #000000;
+  text-shadow: unset;
+}
+
+.stu .action-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 10fr;
+  grid-auto-rows: 45px;
+}
+
+.stu .action-explain {
+  padding-top: 5px;
+}
+
+.stu textarea {
+  font-family: sans-serif;
+}
+
+.stu select {
+  width: 100%;
+}

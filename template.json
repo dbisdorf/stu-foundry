@@ -1,0 +1,60 @@
+{
+  "Actor": {
+    "types": ["hero", "supporting"],
+    "templates": {
+      "herostats": {
+        "style": "",
+        "styledetails": "",
+        "look": "",
+        "lookdetails": "",
+        "equipment": "",
+        "otherdetails": "",
+        "earlyhistory1answer": "",
+        "earlyhistory2answer": "",
+        "relationshipanswer": "",
+        "pursuit": "",
+        "pursuitanswer": "",
+        "history": "",
+        "actions": {
+          "adjust": "ADJUST a technological device.",
+          "attack": "ATTACK with force or words.",
+          "inspire": "INSPIRE courage, defiance, or loyalty.",
+          "maneuver": "MANEUVER with speed or agility.",
+          "outwit": "OUTWIT with cunning or stealth.",
+          "reveal": "REVEAL information or wisdom."
+        },
+        "health": 4,
+        "destiny": false
+      },
+      "supportstats": {
+        "misc": ""
+      }
+    },
+    "hero": {
+      "templates": ["herostats"]
+    },
+    "supporting": {
+      "templates": ["supportstats"]
+    }
+  },
+  "Item": {
+    "types": ["role"],
+    "role": {
+      "stylechoices": [],
+      "equipment": "",
+      "earlyhistory1": "",
+      "earlyhistory2": "",
+      "relationship": "",
+      "pursuitchoices": [],
+      "actions": {
+        "adjust": false,
+        "attack": false,
+        "inspire": false,
+        "maneuver": false,
+        "outwit": false,
+        "reveal": false
+      },
+      "expertise": ""
+    }
+  }
+}

@@ -1,0 +1,166 @@
+<form class="{{cssClass}}" autocomplete="off">
+
+  {{!-- Sheet Header --}}
+
+  <header class="sheet-header">
+    <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
+
+    <div class="header-fields">
+      <h1 class="charname">
+        <input name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
+        {{actor.role.name}}
+      </h1>
+
+      <div class="label-cell">Preferred Actions</div>
+      <div class="preferred-actions">
+        <div>
+          <div>
+            <input type="checkbox" name="actor.role.data.actions.adjust" disabled {{checked actor.role.data.actions.adjust}} />
+            <label class="actions" data-action="adjust" for="actor.role.data.actions.adjust">{{data.actions.adjust}}</label>
+          </div>
+          <div>
+            <input type="checkbox" name="actor.role.data.actions.attack" disabled {{checked actor.role.data.actions.attack}} />
+            <label class="actions" data-action="attack" for="actor.role.data.actions.attack">{{data.actions.attack}}</label>
+          </div>
+          <div>
+            <input type="checkbox" name="actor.role.data.actions.inspire" disabled {{checked actor.role.data.actions.inspire}} />
+            <label class="actions" data-action="inspire" for="actor.role.data.actions.inspire">{{data.actions.inspire}}</label>
+          </div>
+        </div>
+        <div>
+          <div>
+            <input type="checkbox" name="actor.role.data.actions.maneuver" disabled {{checked actor.role.data.actions.maneuver}} />
+            <label class="actions" data-action="maneuver" for="actor.role.data.actions.maneuver">{{data.actions.maneuver}}</label>
+          </div>
+          <div>
+            <input type="checkbox" name="actor.role.data.actions.outwit" disabled {{checked actor.role.data.actions.outwit}} />
+            <label class="actions" data-action="outwit" for="actor.role.data.actions.outwit">{{data.actions.outwit}}</label>
+          </div>
+          <div>
+            <input type="checkbox" name="actor.role.data.actions.reveal" disabled {{checked actor.role.data.actions.reveal}} />
+            <label class="actions" data-action="reveal" for="actor.role.data.actions.reveal">{{data.actions.reveal}}</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="label-cell">Expertise</div>
+      <div>{{actor.role.data.expertise}}</div>
+      <div class="health-and-destiny">
+        <div class="label-cell"><label for="data.health">Health</label></div>
+        <div class="label-cell"><label for="data.destiny">Destiny</label></div>
+        <div>
+          <select name="data.health">
+            {{#select data.health}}
+              <option value="4">Strong</option>
+              <option value="3">Fair</option>
+              <option value="2">Shaken</option>
+              <option value="1">Hurt</option>
+              <option value="0">Down</option>
+            {{/select}}
+          </select>
+        </div>
+        <div>
+          <input type="checkbox" id="data.destiny" name="data.destiny" {{checked data.destiny}}><label for="data.destiny">Check to reverse a failure, declare a fact, or restore someone's health.</label>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="look">Look and Style</a>
+    <a class="item" data-tab="history">History and Pursuits</a>
+    <a class="item" data-tab="equipment">Equipment</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Look and Style --}}
+    <div class="tab look" data-group="primary" data-tab="look">
+      <div class="sheet-tab">
+
+        <div class="look-and-style">
+
+          <div class="label-cell">
+            <label for="data.style.selected">Style</label>
+          </div>
+          <div>
+            <select name="data.style.selected">
+              {{#select data.style.selected}}
+                {{#each actor.role.data.stylechoices as |choice|}}
+                <option value="{{choice}}">{{choice}}</option>
+                {{/each}}
+              {{/select}}
+            </select>
+          </div>
+          <div class="label-cell">
+            <label for="data.style.other">Details</label>
+          </div>
+          <div>
+            <input type="text" name="data.style.other" value="{{data.style.other}}"/>
+          </div>
+
+          <div class="label-cell">
+            <label for="data.look.selected">Look</label>
+          </div>
+          <div>
+            <select name="data.look.selected">
+              {{#select data.look.selected}}
+                <option value="Human">Human</option>
+                <option value="Mostly human">Mostly human</option>
+                <option value="Totally alien">Totally alien</option>
+                <option value="Robotic">Robotic</option>
+              {{/select}}
+            </select>
+          </div>
+          <div class="label-cell">
+            <label for="data.look.details">Details</label>
+          </div>
+          <div>
+            <input type="text" name="data.look.details" value="{{data.look.details}}"/>
+          </div>
+        </div>
+
+        <div class="label-cell"><label for="data.otherdetails">Other Details</label></div>
+        <textarea name="data.otherdetails" rows="5" title="Other details:" data-dtype="String">{{data.otherdetails}}</textarea>
+
+      </div>
+    </div>
+
+    {{!-- History and Pursuits --}}
+    <div class="tab history" data-group="primary" data-tab="history">
+      <div class="sheet-tab">
+        <div class="label-cell">Early History</div>
+        <div><label for="data.earlyhistory1answer">{{actor.role.data.earlyhistory1}}</label><input type="text" name="data.earlyhistory1answer" value="{{data.earlyhistory1answer}}"/></div>
+        <div><label for="data.earlyhistory2answer">{{actor.role.data.earlyhistory2}}</label><input type="text" name="data.earlyhistory2answer" value="{{data.earlyhistory2answer}}"/></div>
+        <div class="label-cell">Relationship History</div>
+        {{actor.role.data.relationship}}
+        <input type="text" name="data.relationshipanswer" value="{{data.relationshipanswer}}"/>
+        <div class="label-cell"><label for="data.pursuit">Pursuit</label></div>
+        <div>
+          <select name="data.pursuit">
+            {{#select data.pursuit}}
+              {{#each actor.role.data.pursuitchoices as |choice|}}
+              <option value="{{choice}}">{{choice}}</option>
+              {{/each}}
+            {{/select}}
+          </select>
+        </div>
+        <input type="text" name="data.pursuitanswer" value="{{data.pursuitanswer}}"/>
+        <div class="label-cell"><label for="data.history">History</label></div>
+        <textarea name="data.history" rows="5" title="History:" data-dtype="String">{{data.history}}</textarea>
+      </div>
+    </div>
+
+    {{!-- Equipment --}}
+    <div class="tab equipment" data-group="primary" data-tab="equipment">
+      <div class="sheet-tab">
+        <textarea name="data.equipment" rows="10" data-dtype="String">{{data.equipment}}</textarea>
+      </div>
+    </div>
+
+  </section>
+</form>

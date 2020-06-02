@@ -1,0 +1,28 @@
+<form>
+    <h2>{{phrase}}</h2>
+    <div class="action-grid">
+      <div><img src="systems/save-the-universe/icons/die-6.png" alt="six"></div>
+      <div><img src="systems/save-the-universe/icons/pass.png" alt="pass"></div>
+      <div class="action-explain">Sixes always pass.</div>
+
+      <div><img src="systems/save-the-universe/icons/die-5.png" alt="five"></div>
+      <div>{{#if preferred}}<img src="systems/save-the-universe/icons/pass.png" alt="pass">{{else}}<img src="systems/save-the-universe/icons/fail.png" alt="fail">{{/if}}</div>
+      <div class="action-explain">This {{#if preferred}}IS{{else}}IS NOT{{/if}} one of your preferred actions.</div>
+
+      <div><img src="systems/save-the-universe/icons/die-4.png" alt="four"></div>
+      <div><input type="checkbox" name="expertise" {{checked expertise}}"/></div>
+      <div class="action-explain">Check if you're relying on your expertise or your ship.</div>
+
+      <div><img src="systems/save-the-universe/icons/die-3.png" alt="three"></div>
+      <div>{{#if healthy}}<img src="systems/save-the-universe/icons/pass.png" alt="pass">{{else}}<img src="systems/save-the-universe/icons/fail.png" alt="fail">{{/if}}</div>
+      <div class="action-explain">Your health {{#if healthy}}IS{{else}}IS NOT{{/if}} Strong or Fair.</div>
+
+      <div><img src="systems/save-the-universe/icons/die-2.png" alt="two"></div>
+      <div><input type="checkbox" name="help" {{checked help}}"/></div>
+      <div class="action-explain">Check if you've received help from an ally.</div>
+
+      <div><img src="systems/save-the-universe/icons/die-1.png" alt="one"></div>
+      <div><img src="systems/save-the-universe/icons/fail.png" alt="fail"></div>
+      <div class="action-explain">Ones always fail.</div>
+    </div>
+</form>
