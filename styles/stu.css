@@ -1,5 +1,17 @@
+.stu textarea {
+  font-family: sans-serif;
+}
+
+.stu select {
+  width: 100%;
+}
+
 .stu a:hover {
   text-shadow: unset;
+}
+
+.stu .actions:hover {
+    color: #009900;
 }
 
 .stu .sheet-header img {
@@ -58,12 +70,4 @@
 
 .stu .action-explain {
   padding-top: 5px;
-}
-
-.stu textarea {
-  font-family: sans-serif;
-}
-
-.stu select {
-  width: 100%;
 }
