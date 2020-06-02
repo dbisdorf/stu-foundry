@@ -27,7 +27,14 @@
         "destiny": false
       },
       "supportstats": {
-        "misc": ""
+        "style": "How do they act and behave? How do they dress?",
+        "look": "Do they look human? What’s distinctive about their appearance?",
+        "occupation": "What are they doing now? What’s their position and responsibility?",
+        "ambition": "What do they want, and what are they willing to do to get it?",
+        "strengths": "What are they good at? What resources can they rely on?",
+        "weaknesses": "Where are they vulnerable? Who are their enemies?",
+        "enemy": "How do they feel about the Enemy?",
+        "resistance": "How do they feel about the Resistance?"
       }
     },
     "hero": {
