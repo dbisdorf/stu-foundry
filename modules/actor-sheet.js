@@ -45,8 +45,6 @@ export class SaveTheUniverseSheet extends ActorSheet {
     const actorData = this.actor.data.data;
     const roleData = this.getData().actor.role.data;
 
-    console.log("Displaying a dialog for " + actorData.actions[clickData.action]);
-
     let template = "systems/save-the-universe/templates/action-dialog.html";
     let preferredAndHealthy = {
       phrase: actorData.actions[clickData.action],
@@ -73,8 +71,6 @@ export class SaveTheUniverseSheet extends ActorSheet {
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
       sound: CONFIG.sounds.dice
     };
-
-    console.log("help is " + expertiseAndHelp.help.checked + " and expertise is " + expertiseAndHelp.expertise.checked);
 
     let explain = [];
     let die = new Die(6);
@@ -144,5 +140,5 @@ export class SaveTheUniverseSheet extends ActorSheet {
     });
 
   }
-  
+
 }
