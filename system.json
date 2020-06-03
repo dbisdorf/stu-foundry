@@ -16,7 +16,14 @@
 	      "system": "save-the-universe",
 	      "path": "./packs/roles.db",
 	      "entity": "Item"
-	    }
+	    },
+			{
+				"name": "galactic-information",
+				"label": "Galactic Information",
+				"system": "save-the-universe",
+				"path": "./packs/galactic-information.db",
+				"entity": "JournalEntry"
+			}
 	],
 	"manifest": "https://raw.githubusercontent.com/dbisdorf/stu-foundry/master/system.json",
   "download": "https://github.com/dbisdorf/stu-foundry/archive/v0.0.1.zip"
