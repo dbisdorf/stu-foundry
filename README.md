@@ -12,11 +12,14 @@ To create a hero:
 
 You can also create a supporting character by creating a new Actor with the "supporting" type.
 
+To use the Galactic Information templates:
+- Open the "Galactic Information" compendium folder.
+- Right-click on the template you want to use, and select "Import" from the pop-up window.
+- A copy of the template will now be in your journal entries. Open it up and customize it.
+
 To resolve an action:
 - In your hero's character sheet, click on the name of the appropriate action.
 - A pop-up dialog will appear, showing you which die results will pass and which will fail, based on your hero's attributes.
 - If you're relying on your hero's expertise or your ship, or if you received help, check those boxes.
 - Click the "Roll" button.
 - The results will appear in the chat log. You'll see whether the dice passed or failed, and why, as well as the overall result.
-
-Planned features include journal templates for galaxy and ship information, for the saga, and for worlds and other locations. 
