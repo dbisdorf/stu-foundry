@@ -14,9 +14,14 @@
     color: #009900;
 }
 
-.stu .sheet-header img {
+.stu .header-image {
   flex: 0 0 150px;
-  height: 150px;
+  margin-right: 6px;
+}
+
+.stu .sheet-header img {
+  width: 100%;
+  height: auto;
 }
 
 .stu .charname {
