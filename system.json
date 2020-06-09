@@ -2,7 +2,7 @@
 	"name": "save-the-universe",
 	"title": "Save the Universe",
 	"description": "Save the Universe RPG.",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"minimumCoreVersion": "0.6.0",
 	"compatibleCoreVersion": "0.6.2",
 	"author": "Don Bisdorf",
@@ -26,5 +26,5 @@
 			}
 	],
 	"manifest": "https://raw.githubusercontent.com/dbisdorf/stu-foundry/master/system.json",
-  "download": "https://github.com/dbisdorf/stu-foundry/archive/v0.1.0.zip"
+  "download": "https://github.com/dbisdorf/stu-foundry/archive/v0.1.1.zip"
 }
