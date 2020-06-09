@@ -23,3 +23,5 @@ To resolve an action:
 - If you're relying on your hero's expertise or your ship, or if you received help, check those boxes.
 - Click the "Roll" button.
 - The results will appear in the chat log. You'll see whether the dice passed or failed, and why, as well as the overall result.
+
+You can file bug reports on GitHub (https://github.com/dbisdorf/stu-foundry) or contact me through Twitter (@dbisdorf), Mastodon (@dbisdorf@dice.camp), or Discord (Don#2462).
