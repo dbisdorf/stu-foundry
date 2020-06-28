@@ -1,6 +1,8 @@
 # stu-foundry
 This is an implementation of the Save the Universe RPG rules for the Foundry Virtual Tabletop.
 
+![Screenshot](https://raw.githubusercontent.com/dbisdorf/stu-foundry/master/docs/stu-screenshot.png)
+
 So far, this project supports character sheets for heroes and for supporting characters, and can manage dice rolls when resolving actions. More features (and fixes for any bugs) will be available as the project progresses.
 
 The full rules for the game are available here: https://dbisdorf.itch.io/save-the-universe
