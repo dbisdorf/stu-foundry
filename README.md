@@ -5,7 +5,7 @@ This is an implementation of the Save the Universe RPG rules for the Foundry Vir
 
 So far, this project supports character sheets for heroes and for supporting characters, and can manage dice rolls when resolving actions. More features (and fixes for any bugs) will be available as the project progresses.
 
-The full rules for the game are available here: https://dbisdorf.itch.io/save-the-universe
+The full rules are published under a Creative Commons Attribution 4.0 International License, and are available here: https://dbisdorf.itch.io/save-the-universe
 
 To create a hero:
 - Create a new Actor, using the "hero" type.
