@@ -14,7 +14,7 @@
     color: #009900;
 }
 
-.stu .header-image {
+.stu div.header-image {
   flex: 0 0 150px;
   margin-right: 6px;
 }
@@ -55,10 +55,8 @@
   vertical-align: -5px;
 }
 
-.stu .tabs .item {
-  border: solid 2px #000000;
-  margin: 2px;
-  padding: 5px;
+.stu nav.sheet-tabs {
+  line-height: 30px;
 }
 
 .stu .tabs .item.active {
