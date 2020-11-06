@@ -58,13 +58,16 @@ export class SaveTheUniverseSheet extends ActorSheet {
       buttons: {
         submit: {
           label: "Roll",
-          callback: html => this.rollAction(preferredAndHealthy, html[0].children[0])
+          callback: dlg => this.rollAction(
+            preferredAndHealthy, 
+            $(dlg[0]).find("#expertise")[0].checked,
+            $(dlg[0]).find("#help")[0].checked)
         }
       }
     }, {classes: ["stu", "dialog"]}).render(true);
   }
 
-  rollAction(preferredAndHealthy, expertiseAndHelp) {
+  rollAction(preferredAndHealthy, expertise, help) {
     let template = 'systems/save-the-universe/templates/chat-roll.html';
     let chatData = {
       user: game.user._id,
@@ -73,12 +76,11 @@ export class SaveTheUniverseSheet extends ActorSheet {
     };
 
     let explain = [];
-    let die = new Die(6);
-    die.roll(2);
+    let die = new Die({faces: 6, number: 2}).evaluate();
     let passes = 0;
     for (let result of die.results) {
       let passFail = "FAIL";
-      switch (result) {
+      switch (result.result) {
         case 6:
           explain.push("Six: PASS");
           passes += 1;
@@ -91,7 +93,7 @@ export class SaveTheUniverseSheet extends ActorSheet {
           explain.push("Five: " + passFail + " (preferred)");
           break;
         case 4:
-          if (expertiseAndHelp.expertise.checked) {
+          if (expertise) {
             passFail = "PASS";
             passes += 1;
           }
@@ -105,7 +107,7 @@ export class SaveTheUniverseSheet extends ActorSheet {
           explain.push("Three: " + passFail + " (health)");
           break;
         case 2:
-          if (expertiseAndHelp.help.checked) {
+          if (help) {
             passFail = "PASS";
             passes += 1;
           }
