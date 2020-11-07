@@ -1,5 +1,5 @@
 import { SaveTheUniverseSheet } from "./actor-sheet.js";
-import SaveTheUniverseActor from "./actor.js";
+import { SaveTheUniverseActor } from "./actor.js";
 
 Hooks.once("init", async function() {
 	console.log("Initializing Save the Universe System");

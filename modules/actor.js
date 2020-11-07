@@ -1,11 +1,13 @@
-export default class SaveTheUniverseActor extends Actor {
+export class SaveTheUniverseActor extends Actor {
 
   /** @override */
-  async createOwnedItem(itemData, options) {
+  async createEmbeddedEntity(embeddedName, itemData, options) {
+    console.log("Here I am in createEmbeddedEntity");
+    console.log(itemData.data);
     this.update({
       "data.equipment": itemData.data.equipment
     });
-    return super.createOwnedItem(itemData, options);
+    return super.createEmbeddedEntity(embeddedName, itemData, options);
   }
 
 }
