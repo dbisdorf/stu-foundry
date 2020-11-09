@@ -2,9 +2,9 @@
 	"name": "save-the-universe",
 	"title": "Save the Universe",
 	"description": "Save the Universe RPG.",
-	"version": "0.1.1",
-	"minimumCoreVersion": "0.6.0",
-	"compatibleCoreVersion": "0.6.2",
+	"version": "0.2.0",
+	"minimumCoreVersion": "0.7.6",
+	"compatibleCoreVersion": "0.7.6",
 	"author": "Don Bisdorf",
 	"scripts": [],
 	"esmodules": ["modules/stu.js"],
@@ -17,14 +17,14 @@
 	      "path": "./packs/roles.db",
 	      "entity": "Item"
 	    },
-			{
-				"name": "galactic-information",
-				"label": "Galactic Information",
-				"system": "save-the-universe",
-				"path": "./packs/galactic-information.db",
-				"entity": "JournalEntry"
-			}
+		{
+			"name": "galactic-information",
+			"label": "Galactic Information",
+			"system": "save-the-universe",
+			"path": "./packs/galactic-information.db",
+			"entity": "JournalEntry"
+		}
 	],
 	"manifest": "https://raw.githubusercontent.com/dbisdorf/stu-foundry/master/system.json",
-  "download": "https://github.com/dbisdorf/stu-foundry/archive/v0.1.1.zip"
+  "download": "https://github.com/dbisdorf/stu-foundry/archive/v0.2.0.zip"
 }

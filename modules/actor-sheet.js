@@ -67,14 +67,7 @@ export class SaveTheUniverseSheet extends ActorSheet {
     }, {classes: ["stu", "dialog"]}).render(true);
   }
 
-  rollAction(preferredAndHealthy, expertise, help) {
-    let template = 'systems/save-the-universe/templates/chat-roll.html';
-    let chatData = {
-      user: game.user._id,
-      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-      sound: CONFIG.sounds.dice
-    };
-
+  async rollAction(preferredAndHealthy, expertise, help) {
     let explain = [];
     let die = new Die({faces: 6, number: 2}).evaluate();
     let passes = 0;
@@ -130,17 +123,22 @@ export class SaveTheUniverseSheet extends ActorSheet {
         finalResult = "Complete Success";
         break;
     }
+    let template = 'systems/save-the-universe/templates/chat-roll.html';
     let templateData = {
       title: preferredAndHealthy.phrase,
       firstDie: explain[0],
       secondDie: explain[1],
       finalResult: finalResult
     };
-    renderTemplate(template, templateData).then(content => {
-      chatData.content = content;
-      ChatMessage.create(chatData);
-    });
-
+    const content = await renderTemplate(template, templateData);
+    let chatData = {
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      content: content,
+      type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+      sound: CONFIG.sounds.dice
+    };
+    console.debug(content.slice(0, 1));
+    CONFIG.ChatMessage.entityClass.create(chatData, {});
   }
 
 }
