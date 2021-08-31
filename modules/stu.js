@@ -7,14 +7,15 @@ Hooks.once("init", async function() {
 	Actors.registerSheet("stu", SaveTheUniverseSheet, { makeDefault: true });
 });
 
-Hooks.on("createOwnedItem", (parentEntity, childData, options, userId) => {
-    parentEntity.items.forEach(i => {
-		if ((childData.type === i.data.type) && (i.data.name != childData.name)) {
-			parentEntity.deleteOwnedItem(i.id);
+Hooks.on("createItem", (document, options, userId) => {
+	document.actor.data.items.forEach(i => {
+		if ((document.data.type === i.data.type) && (i.data.name != document.data.name)) {
+			document.actor.deleteEmbeddedDocuments("Item", [i.id]);
 		}
-	});	
-    parentEntity.update({
-		"data.equipment": childData.data.equipment
-	});	
-	return true;
+	});
+
+	document.actor.update({
+		"data.equipment": document.data.data.equipment
+	});
 });
+
