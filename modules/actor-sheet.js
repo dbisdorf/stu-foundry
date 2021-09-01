@@ -134,11 +134,11 @@ export class SaveTheUniverseSheet extends ActorSheet {
     let chatData = {
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
       content: content,
-      type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+      type: CONST.CHAT_MESSAGE_TYPES.OOC,
       sound: CONFIG.sounds.dice
     };
     console.debug(content.slice(0, 1));
-    CONFIG.ChatMessage.entityClass.create(chatData, {});
+    CONFIG.ChatMessage.documentClass.create(chatData, {});
   }
 
 }
