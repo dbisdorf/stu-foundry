@@ -4,7 +4,7 @@
 	"description": "Save the Universe RPG.",
 	"version": "1.0.0",
 	"minimumCoreVersion": "0.8.9",
-	"compatibleCoreVersion": "0.8.9",
+	"compatibleCoreVersion": "9.269",
 	"author": "Don Bisdorf",
 	"scripts": [],
 	"esmodules": ["modules/stu.js"],
